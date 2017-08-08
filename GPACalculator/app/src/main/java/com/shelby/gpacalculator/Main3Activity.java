@@ -15,6 +15,7 @@ public class Main3Activity extends AppCompatActivity {
 
       String Result = "NULL";
 
+        //Receive GPA result from activity 2
         Intent intent1 = getIntent();
         Bundle bundle = intent1.getExtras();
 
@@ -23,6 +24,7 @@ public class Main3Activity extends AppCompatActivity {
             Result = bundle.getString("RESULT");
         }
 
+        //Display GPA result in a TextView
         TextView text = (TextView)findViewById(R.id.GPA_RESULT);
 
         text.setText(Result);

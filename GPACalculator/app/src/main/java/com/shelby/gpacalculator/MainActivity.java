@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+        //next button
         Button btn;
 
         btn = (Button) findViewById(R.id.button);
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                //three EditText fields for GPA, Credit Hours, number of courses this semester -- turned into strings
                 EditText currentGPA;
                 currentGPA = (EditText)findViewById(R.id.currentGPA);
 
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
                 String NUMBER = classNumber.getText().toString();
 
+                //handling user input, all 3 fields must be completed, toast error message shown if not
                 if(GPA.isEmpty()==true || HOURS.isEmpty()==true || NUMBER.isEmpty()==true)
                 {
                     Context context = getApplicationContext();
@@ -54,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
+                    //move to next activity and bring the data in all 3 fields
                     Intent intent = new Intent(getBaseContext(), Main2Activity.class);
                     intent.putExtra("GPAString", GPA);
                     intent.putExtra("HoursString", HOURS);

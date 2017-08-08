@@ -14,7 +14,7 @@ public class gradeData
         currentHours = hours;
         currentClasses = schedule;
         currentSchedule = new course[6];
-        for(int i=0; i<currentClasses; i++)
+        for(int i=0; i<6; i++)
         {
             currentSchedule[i] = new course();
         }
@@ -26,8 +26,6 @@ public class gradeData
         int hours = Hours;
         double percent = Percent;
         double gradepoint = 0;
-
-
 
             if(percent>=93)
             {
@@ -85,7 +83,7 @@ public class gradeData
         int totalCH = currentHours;
         double newGPA = 0;
 
-        for(int i = 0; i<5; i++)
+        for(int i = 0; i<6; i++)
         {
             totalGP+= (currentSchedule[i].gradePoints * currentSchedule[i].creditHours);
             totalCH+=currentSchedule[i].creditHours;
