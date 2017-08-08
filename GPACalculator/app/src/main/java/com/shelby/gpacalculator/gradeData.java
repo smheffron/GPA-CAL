@@ -13,7 +13,7 @@ public class gradeData
         currentGPA = gpa;
         currentHours = hours;
         currentClasses = schedule;
-        currentSchedule = new course[currentClasses];
+        currentSchedule = new course[6];
         for(int i=0; i<currentClasses; i++)
         {
             currentSchedule[i] = new course();
@@ -85,7 +85,7 @@ public class gradeData
         int totalCH = currentHours;
         double newGPA = 0;
 
-        for(int i = 0; i<currentClasses; i++)
+        for(int i = 0; i<5; i++)
         {
             totalGP+= (currentSchedule[i].gradePoints * currentSchedule[i].creditHours);
             totalCH+=currentSchedule[i].creditHours;

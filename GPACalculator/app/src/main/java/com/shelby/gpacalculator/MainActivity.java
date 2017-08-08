@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+import android.content.Context;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,12 +37,29 @@ public class MainActivity extends AppCompatActivity {
                 EditText classNumber;
                 classNumber = (EditText)findViewById(R.id.classNumber);
 
+                String GPA = currentGPA.getText().toString();
 
-                Intent intent = new Intent(getBaseContext(), Main2Activity.class);
-                intent.putExtra("GPAString", currentGPA.getText().toString());
-                intent.putExtra("HoursString", passedHours.getText().toString());
-                intent.putExtra("NumberString", classNumber.getText().toString());
-                startActivity(intent);
+                String HOURS = passedHours.getText().toString();
+
+                String NUMBER = classNumber.getText().toString();
+
+                if(GPA.isEmpty()==true || HOURS.isEmpty()==true || NUMBER.isEmpty()==true)
+                {
+                    Context context = getApplicationContext();
+                    CharSequence text = "Entry Required";
+                    int duration = Toast.LENGTH_SHORT;
+
+                    Toast toast = Toast.makeText(context, text, duration);
+                    toast.show();
+                }
+                else
+                {
+                    Intent intent = new Intent(getBaseContext(), Main2Activity.class);
+                    intent.putExtra("GPAString", GPA);
+                    intent.putExtra("HoursString", HOURS);
+                    intent.putExtra("NumberString", NUMBER);
+                    startActivity(intent);
+                }
             }
         });
 

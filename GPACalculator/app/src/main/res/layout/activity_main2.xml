@@ -8,64 +8,42 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:windowSoftInputMode="stateHidden"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
     tools:context="com.shelby.gpacalculator.Main2Activity">
 
-
-    <TextView
-        android:text="Grade (%)"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView2"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="74dp"
-        android:layout_marginEnd="74dp"
-        android:id="@+id/textView3" />
-
-    <TextView
-        android:text="Credit Hours"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="46dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="17dp"
-        android:id="@+id/textView2"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/textView6"
-        android:layout_toEndOf="@+id/textView6" />
 
     <Button
         android:text="Next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="20dp"
         android:id="@+id/button2"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="Class 1"
+        android:text="Credit Hours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="19dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="32dp"
-        android:id="@+id/textView6"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="21dp"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView6"
+        android:layout_toEndOf="@+id/textView6" />
 
-    <EditText
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/hour1"
-        android:layout_below="@+id/textView6"
-        android:layout_alignRight="@+id/button2"
-        android:layout_alignEnd="@+id/button2"
-        android:layout_marginRight="30dp"
-        android:layout_marginEnd="30dp" />
+    <TextView
+        android:text="Grade (%)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignLeft="@+id/grade1"
+        android:layout_alignStart="@+id/grade1"/>
 
     <EditText
         android:layout_width="100dp"
@@ -73,10 +51,201 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/grade1"
-        android:layout_alignBaseline="@+id/hour1"
-        android:layout_alignBottom="@+id/hour1"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_alignStart="@+id/textView3" />
+        android:nextFocusDown="@+id/hour2"
+        android:layout_marginTop="33dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_below="@+id/textView3"
+        android:layout_toRightOf="@+id/hour1"
+        android:layout_toEndOf="@+id/hour1" />
+
+    <TextView
+        android:text="Class 1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:id="@+id/textView6"
+        android:layout_alignBottom="@+id/grade1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Class2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView6"
+        android:layout_alignLeft="@+id/textView6"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_marginTop="56dp"
+        android:id="@+id/textView7" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/grade2"
+        android:nextFocusDown="@+id/hour3"
+        android:layout_alignBottom="@+id/hour2"
+        android:layout_alignLeft="@+id/grade1"
+        android:layout_alignStart="@+id/grade1"
+        android:layout_alignTop="@+id/hour2" />
+
+    <TextView
+        android:text="Class 3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:id="@+id/textView8"
+        android:layout_below="@+id/textView7"
+        android:layout_alignLeft="@+id/textView7"
+        android:layout_alignStart="@+id/textView7" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/grade3"
+        android:nextFocusDown="@+id/hour4"
+        android:layout_alignBaseline="@+id/hour3"
+        android:layout_alignBottom="@+id/hour3"
+        android:layout_alignLeft="@+id/grade2"
+        android:layout_alignStart="@+id/grade2" />
+
+    <TextView
+        android:text="Class 4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:id="@+id/textView9"
+        android:layout_below="@+id/grade3"
+        android:layout_alignLeft="@+id/textView8"
+        android:layout_alignStart="@+id/textView8" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:ems="10"
+        android:nextFocusDown="@+id/hour5"
+        android:id="@+id/grade4"
+        android:layout_alignBaseline="@+id/hour4"
+        android:layout_alignBottom="@+id/hour4"
+        android:layout_alignLeft="@+id/grade3"
+        android:layout_alignStart="@+id/grade3" />
+
+    <TextView
+        android:text="Class 5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grade4"
+        android:layout_alignLeft="@+id/textView9"
+        android:layout_alignStart="@+id/textView9"
+        android:layout_marginTop="55dp"
+        android:id="@+id/textView10" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/hour5"
+        android:nextFocusDown="@+id/grade5"
+        android:layout_alignBottom="@+id/textView10"
+        android:layout_alignLeft="@+id/hour4"
+        android:layout_alignStart="@+id/hour4" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/hour4"
+        android:nextFocusDown="@+id/grade4"
+        android:layout_alignBottom="@+id/textView9"
+        android:layout_alignLeft="@+id/hour3"
+        android:layout_alignStart="@+id/hour3" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/hour3"
+        android:layout_alignBottom="@+id/textView8"
+        android:layout_alignLeft="@+id/hour2"
+        android:layout_alignStart="@+id/hour2"
+        android:nextFocusDown="@+id/grade3"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/hour2"
+        android:nextFocusDown="@+id/grade2"
+        android:layout_above="@+id/textView8"
+        android:layout_alignLeft="@+id/hour1"
+        android:layout_alignStart="@+id/hour1" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/grade5"
+        android:nextFocusDown="@+id/hour6"
+        android:layout_alignBaseline="@+id/hour5"
+        android:layout_alignBottom="@+id/hour5"
+        android:layout_alignLeft="@+id/grade4"
+        android:layout_alignStart="@+id/grade4" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:ems="10"
+        android:nextFocusDown="@+id/grade6"
+        android:layout_alignBottom="@+id/textView11"
+        android:layout_alignLeft="@+id/hour5"
+        android:layout_alignStart="@+id/hour5"
+        android:id="@+id/hour6" />
+
+    <TextView
+        android:text="Class 6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:id="@+id/textView11"
+        android:layout_above="@+id/button2"
+        android:layout_alignLeft="@+id/textView10"
+        android:layout_alignStart="@+id/textView10" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/grade6"
+        android:layout_alignBottom="@+id/hour6"
+        android:layout_alignLeft="@+id/grade5"
+        android:layout_alignStart="@+id/grade5"
+        android:layout_alignTop="@+id/hour6" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/hour1"
+        android:nextFocusDown="@+id/grade1"
+        android:layout_marginLeft="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
 
 </RelativeLayout>
 
