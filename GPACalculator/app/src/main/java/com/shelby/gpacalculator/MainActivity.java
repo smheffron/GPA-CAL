@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 classNumber = (EditText)findViewById(R.id.classNumber);
 
 
-                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                Intent intent = new Intent(getBaseContext(), Main2Activity.class);
                 intent.putExtra("GPAString", currentGPA.getText().toString());
                 intent.putExtra("HoursString", passedHours.getText().toString());
                 intent.putExtra("NumberString", classNumber.getText().toString());

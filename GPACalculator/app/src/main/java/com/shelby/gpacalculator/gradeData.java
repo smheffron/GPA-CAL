@@ -1,10 +1,7 @@
 package com.shelby.gpacalculator;
 
-/**
- * Created by Shelby on 8/6/17.
- */
-
-public class gradeData {
+public class gradeData
+{
     double currentGPA;
     int currentHours;
     int currentClasses;
@@ -24,14 +21,13 @@ public class gradeData {
         newGPA = 0;
     }
 
-    void fillCourseArray()
+    void fillCourseArray(int Hours, double Percent, int iteration)
     {
-        int hours = 0;
-        double percent = 0;
+        int hours = Hours;
+        double percent = Percent;
         double gradepoint = 0;
 
-        for(int i = 0; i<currentClasses; i++)
-        {
+
 
             if(percent>=93)
             {
@@ -78,9 +74,9 @@ public class gradeData {
                 gradepoint=0.0;
             }
 
-            currentSchedule[i].gradePoints=gradepoint;
-            currentSchedule[i].creditHours=hours;
-        }
+            currentSchedule[iteration].gradePoints=gradepoint;
+            currentSchedule[iteration].creditHours=hours;
+
     }
 
     double calculateGPA()
@@ -101,3 +97,4 @@ public class gradeData {
     }
 
 }
+
