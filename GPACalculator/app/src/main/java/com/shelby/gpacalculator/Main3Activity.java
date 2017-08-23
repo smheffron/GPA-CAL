@@ -27,7 +27,7 @@ public class Main3Activity extends AppCompatActivity {
         //Display GPA result in a TextView
         TextView text = (TextView)findViewById(R.id.GPA_RESULT);
 
-        text.setText(Result);
+        text.setText("Your GPA is:\n"+Result);
 
 
 

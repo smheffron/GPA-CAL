@@ -3,6 +3,7 @@ package com.shelby.gpacalculator;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -54,10 +55,19 @@ public class MainActivity extends AppCompatActivity {
                     Toast toast = Toast.makeText(context, text, duration);
                     toast.show();
                 }
+                else if((Integer.parseInt(NUMBER)>6))
+                {
+                    Context context2 = getApplicationContext();
+                    CharSequence text2 = "Maximum of 6 classes";
+                    int duration2 = Toast.LENGTH_SHORT;
+
+                    Toast toast = Toast.makeText(context2, text2, duration2);
+                    toast.show();
+                }
                 else
                 {
                     //move to next activity and bring the data in all 3 fields
-                    Intent intent = new Intent(getBaseContext(), Main2Activity.class);
+                    Intent intent = new Intent(getBaseContext(), Main4Activity.class);
                     intent.putExtra("GPAString", GPA);
                     intent.putExtra("HoursString", HOURS);
                     intent.putExtra("NumberString", NUMBER);
@@ -67,4 +77,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
 }

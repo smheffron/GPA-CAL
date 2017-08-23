@@ -20,7 +20,7 @@ public class Main2Activity extends AppCompatActivity {
         String hours = "NULL";
         String number = "NULL";
 
-        //Recieve 3 Strings of data from activiy 1
+        //Receive 3 Strings of data from activiy 1
         Intent intent1 = getIntent();
         Bundle bundle = intent1.getExtras();
 
@@ -187,7 +187,10 @@ public class Main2Activity extends AppCompatActivity {
                     grades.fillCourseArray(hourFIVE, gradeFIVE, 4);
                     grades.fillCourseArray(hourSIX, gradeSIX, 5);
                     double result = grades.calculateGPA();
-                    String Result = Double.toString(result);
+
+                    double roundOff = (double) Math.round(result * 1000.000) / 1000.000;
+
+                    String Result = Double.toString(roundOff);
 
                     //Send result to next activity for viewing
                     intent.putExtra("RESULT", Result);
